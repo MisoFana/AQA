@@ -1,30 +1,34 @@
 package main.com.aqa.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    private final WebDriver driver;
+    @FindBy(name = "email")
+    private WebElement emailField;
 
-    private final By emailField = By.name("email");
+    @FindBy(name = "password")
+    private WebElement passwordField;
 
-    private final By passwordField = By.name("password");
-    private final By loginButton = By.cssSelector("button[type='submit']");
+    @FindBy(css = "button[type='submit']")
+    private WebElement loginButton;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public void enterEmail(String email) {
-        driver.findElement(emailField).sendKeys(email);
+        emailField.sendKeys(email);
     }
 
     public void enterPassword(String password) {
-        driver.findElement(passwordField).sendKeys(password);
+        passwordField.sendKeys(password);
     }
 
     public void clickLoginButton() {
-        driver.findElement(loginButton).click();
+        loginButton.click();
     }
 }

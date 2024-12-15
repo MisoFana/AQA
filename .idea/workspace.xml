@@ -35,6 +35,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ColorPaletteStream.executor": "Run",
+    "Application.DataValidator.executor": "Run",
     "Application.PartA.executor": "Run",
     "Application.PartB.executor": "Run",
     "Application.PartC.executor": "Run",
@@ -45,6 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.DriverFactoryTest.executor": "Run",
     "TestNG.LoginTest.executor": "Run",
+    "TestNG.LogoutTest.executor": "Run",
     "TestNG.RadioButtonTest.executor": "Run",
     "TestNG.SignUpTest.executor": "Run",
     "git-widget-placeholder": "framework",
@@ -70,10 +72,35 @@
       <recent name="$PROJECT_DIR$/src/task6/Parts" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="task12" />
       <recent name="task11" />
       <recent name="task8" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DriverFactoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.DriverFactoryTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.DriverFactoryTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
