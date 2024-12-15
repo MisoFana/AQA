@@ -140,3 +140,6 @@ xpath: //li/a[@class='s-navigation--item js-products-menu is-selected' and text(
 ## Task20
 1. Реалізувати end-to-end мобільний тест-кейс для iOS або Android з додаванням скріншотів і DOM.
 2. Ввести два числа і перевірити операцію множення.
+
+## Task21
+1. Калькулятор я буду на лінукс робити.
