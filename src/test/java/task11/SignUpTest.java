@@ -1,5 +1,7 @@
 package task11;
 
+import config.AllureAttachments;
+import config.VideoRecorder;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,10 +14,11 @@ public class SignUpTest {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp() throws Exception {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/radio-button");
+        VideoRecorder.startRecording("TestName");
     }
 
     @Test
@@ -33,7 +36,10 @@ public class SignUpTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown() throws Exception {
+        AllureAttachments.attachScreenshot(driver);
+        AllureAttachments.attachDOM(driver);
+        VideoRecorder.stopRecording();
         driver.quit();
     }
 }
